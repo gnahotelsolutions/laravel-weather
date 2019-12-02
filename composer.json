@@ -49,7 +49,7 @@
                 "GNAHotelSolutions\\Weather\\WeatherServiceProvider"
             ],
             "aliases": {
-                "Weather": "GNAHotelSolutions\\Weather\\LaravelWeatherFacade"
+                "Weather": "GNAHotelSolutions\\Weather\\WeatherFacade"
             }
         }
     }
