@@ -1,0 +1,56 @@
+{
+    "name": "gnahotelsolutions/laravel-weather",
+    "description": "🌤️ A wrapper around Open Weather Map to get the current weather on a location.",
+    "keywords": [
+        "gnahotelsolutions",
+        "weather",
+        "laravel",
+        "openweathermap",
+        "api"
+    ],
+    "homepage": "https://github.com/gnahotelsolutions/weather",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Llop",
+            "email": "dllop@gnahs.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.4",
+        "illuminate/support": "5.8.*|6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*|4.*",
+        "phpunit/phpunit": "^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GNAHotelSolutions\\Weather\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GNAHotelSolutions\\Weather\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GNAHotelSolutions\\Weather\\WeatherServiceProvider"
+            ],
+            "aliases": {
+                "Weather": "GNAHotelSolutions\\Weather\\LaravelWeatherFacade"
+            }
+        }
+    }
+}
