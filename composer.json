@@ -21,7 +21,7 @@
     "require": {
         "php": "^7.1",
         "guzzlehttp/guzzle": "^6.4",
-        "illuminate/support": "5.8.*|6.*|^7.*"
+        "illuminate/support": "5.8.*|6.*|7.*"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*|4.*",
