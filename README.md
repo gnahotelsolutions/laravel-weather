@@ -17,14 +17,20 @@ composer require gnahotelsolutions/laravel-weather
 
 ## Usage
 
+Fill the `WEATHER_API_KEY` environment variable with your own API key to query the server.
+
+
 ```php
+
+use GNAHotelSolutions\Weather\Weather;
+
 $weather = new Weather();
 
 // Checking weather by city name
-$currentWeatherInGirona = $weather->get('girona,es');
+$currentWeatherInGirona = json_decode($weather->get('girona,es'));
 
 // You can use the city id, this will get you unambiguous results
-$currentWeatherInGirona = $weather->find('3121456');
+$currentWeatherInGirona = json_decode($weather->find('3121456'));
 ```
 
 ### Units
@@ -34,7 +40,7 @@ configuration file or on the fly:
 ```php
 $weather = new Weather();
 
-$currentWeatherInGirona = $weather->inUnits('imperial')->get('girona,es');
+$currentWeatherInGirona = json_decode($weather->inUnits('imperial')->get('girona,es'));
 ```
 
 ### Language
@@ -44,7 +50,7 @@ configuration file or on the fly:
 ```php
 $weather = new Weather();
 
-$currentWeatherInGirona = $weather->inLanguage('en')->get('girona');
+$currentWeatherInGirona = json_decode($weather->inLanguage('en')->get('girona'));
 ```
 
 ### Guzzle Client Instance
@@ -55,7 +61,7 @@ $weather = new Weather();
 
 $guzzle = $this->getSpecialGuzzleClient();
 
-$currentWeatherInGirona = $weather->using($guzzle)->get('girona');
+$currentWeatherInGirona = json_decode($weather->using($guzzle)->get('girona'));
 ```
 
 ### Testing
