@@ -11,7 +11,7 @@ use GuzzleHttp\Psr7\Response;
 
 class WeatherTest extends TestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
