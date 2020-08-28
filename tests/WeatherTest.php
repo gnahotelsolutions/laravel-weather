@@ -37,7 +37,7 @@ class WeatherTest extends TestCase
     {
         $this->weather->get('London');
 
-        $this->assertEquals('APPID=test&units=metric&lang=es&q=London', $this->history->first()['request']->getUri()->getQuery());
+        $this->assertSame('APPID=test&units=metric&lang=es&q=London', $this->history->first()['request']->getUri()->getQuery());
     }
 
     /** @test */
@@ -45,7 +45,7 @@ class WeatherTest extends TestCase
     {
         $this->weather->inUnits('imperial')->get('London');
 
-        $this->assertEquals('APPID=test&units=imperial&lang=es&q=London', $this->history->first()['request']->getUri()->getQuery());
+        $this->assertSame('APPID=test&units=imperial&lang=es&q=London', $this->history->first()['request']->getUri()->getQuery());
     }
 
     /** @test */
@@ -53,7 +53,7 @@ class WeatherTest extends TestCase
     {
         $this->weather->inLanguage('ca')->get('London');
 
-        $this->assertEquals('APPID=test&units=metric&lang=ca&q=London', $this->history->first()['request']->getUri()->getQuery());
+        $this->assertSame('APPID=test&units=metric&lang=ca&q=London', $this->history->first()['request']->getUri()->getQuery());
     }
 
     /** @test */
@@ -61,7 +61,7 @@ class WeatherTest extends TestCase
     {
         $this->weather->find('12345');
 
-        $this->assertEquals('APPID=test&units=metric&lang=es&id=12345', $this->history->first()['request']->getUri()->getQuery());
+        $this->assertSame('APPID=test&units=metric&lang=es&id=12345', $this->history->first()['request']->getUri()->getQuery());
     }
 
     protected function getFakeGuzzleClient(array $responses, &$container = []): Client
