@@ -1,7 +1,7 @@
 # Laravel Open Weather Map Wrapper
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gnahotelsolutions/laravel-weather.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-weather)
-[![Build Status](https://img.shields.io/travis/gnahotelsolutions/laravel-weather/master.svg?style=flat-square)](https://travis-ci.org/gnahotelsolutions/laravel-weather)
+![Build status](https://github.com/gnahotelsolutions/laravel-weather/actions/workflows/laravel.yml/badge.svg)
 [![Quality Score](https://img.shields.io/scrutinizer/g/gnahotelsolutions/laravel-weather.svg?style=flat-square)](https://scrutinizer-ci.com/g/gnahotelsolutions/laravel-weather)
 [![Total Downloads](https://img.shields.io/packagist/dt/gnahotelsolutions/laravel-weather.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-weather)
 
